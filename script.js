@@ -1,8 +1,9 @@
-let pokemonName = "";
-let score = 0;
-let heart = 5;
-let maxValue = 1025;
-let minValue = 1;
+let pokemonName = localStorage.getItem("pokemonName") || "";
+let score = parseInt(localStorage.getItem("score")) || 0;
+let heart = parseInt(localStorage.getItem("heart")) || 5;
+let maxValue = parseInt(localStorage.getItem("maxValue")) || 1025;
+let minValue = parseInt(localStorage.getItem("minValue")) || 1;
+//GameSound
 const correctSound = new Audio("resource/audio/correct-choice.mp3");
 const wrongSound = new Audio("resource/audio/wrong-choice.mp3");
 const gameOver = new Audio("resource/audio/game-over-.mp3");
@@ -17,6 +18,7 @@ async function getPokemon() {
       throw new Error(`HTTP error!! Status: ${response.status}`);
     let data = await response.json();
     pokemonName = data.name;
+    localStorage.setItem("pokemonName", pokemonName);
     triggerPokeballSpin();
     let pokemonImage = data.sprites.front_default;
     document.getElementById("ChangesStatement").style.display = "none";
@@ -52,10 +54,14 @@ document.addEventListener("click", function (e) {
       e.target.classList.add("Checked");
       minValue = parseInt(e.target.dataset.min);
       maxValue = parseInt(e.target.dataset.max);
+      localStorage.setItem("minValue", minValue);
+      localStorage.setItem("maxValue", maxValue);
       document.getElementById("ChangesStatement").style.display = "block";
     } else {
       minValue = 1;
       maxValue = 1025;
+      localStorage.setItem("minValue", minValue);
+      localStorage.setItem("maxValue", maxValue);
       document.getElementById("ChangesStatement").style.display = "none";
     }
   }
@@ -74,6 +80,8 @@ function guessPokemon() {
     const pokemonImage = document.getElementById("pokemonImage");
     pokemonImage.style.filter = "brightness(100%)";
     score++;
+    localStorage.setItem("score", score);
+    localStorage.setItem("heart", heart);
     document.getElementById("scoreDisplay").textContent = score;
     setTimeout(getPokemon, 600);
     correctSound.play();
@@ -82,6 +90,7 @@ function guessPokemon() {
     resultMessage.innerHTML = "Try Again!";
     document.getElementById("pokemonInput").value = "";
     heart--;
+    localStorage.setItem("heart", heart);
     document.getElementById("lives").textContent = heart;
     wrongSound.play();
     if (heart === 0) {
@@ -110,6 +119,8 @@ function GameOver() {
   gameOver.play();
   score = 0;
   heart = 5;
+  localStorage.setItem("score", score);
+  localStorage.setItem("heart", heart);
   setTimeout(getPokemon, 2500);
 }
 

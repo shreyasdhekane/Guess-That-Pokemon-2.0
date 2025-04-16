@@ -1,17 +1,31 @@
-🎮 Guess That Pokémon 2.0
-To play now 👉 shreyasdhekane.github.io/guess-that-pokemon
+<h2>🎮 Guess That Pokémon 2.0!</h2>
 
-Get ready for a fresh and modern twist on your favorite silhouette guessing game — now more stylish, responsive, and fun than ever before!
+Play Now -> https://shreyasdhekane.github.io/guess-that-pokemon2.0/
 
-🌟 What's New in 2.0?
-🧠 Smarter UI – Sleek, responsive design with retro pixel vibes and a vibrant Pokedex-themed interface.
-🔍 Generation Filter – Select from Gen 1 to Gen 9 to match your Pokémon knowledge!
-👻 Mystery Silhouettes – Clean silhouette images to challenge your recognition skills.
-📝 Real-time Input – Smooth user input field with instant feedback.
-❤️ Lives System – You now have limited tries. How long can you survive?
-🏆 Score Tracker – Climb your personal leaderboard with every correct guess!
+A fresh take on the classic silhouette guessing game — now faster, cleaner, and built for all generations!
+
+🌟 Features
+
+    🎯 Random Pokémon Silhouettes – Test your memory and recognition skills.
+  
+    🧭 Generation Selector – Play by your favorite Gen (1 to 9).
+
+    ✅ Real-time Answer Feedback – Instant response to your guesses.
+
+    🏆 Score Tracker – See how many you can get right!
+    
+    ❤️ Lives System – Lose a life for every incorrect guess.
+    
+    📱 Fully Responsive – Smooth gameplay on desktop and mobile.
+    
+    🎨 Modern Pokedex UI – Retro vibes with a sleek new look.
 
 🛠️ Tech Stack
-HTML/CSS – For structured layout and crisp retro visuals
 
-JavaScript – Game logic, input handling, score, and feedback
+    HTML/CSS – Structured layout and styling
+
+    JavaScript – Game logic and interactivity
+    
+    PokéAPI – Real-time Pokémon data
+
+<p>Gotta catch 'em all! 🎉</p>

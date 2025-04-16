@@ -27,12 +27,14 @@ body {
   border: #333;
   border-radius: 20px;
   padding: 5px;
+  cursor: pointer;
 }
 .Gen {
   color: #333;
   border: none;
   border-radius: 20px;
   padding: 5px;
+  cursor: pointer;
 }
 .Gen:hover {
   font-size: 15px;
@@ -178,4 +180,5 @@ body {
   font-size: 15px;
   width: 60%;
   height: 40%;
+  cursor: pointer;
 }

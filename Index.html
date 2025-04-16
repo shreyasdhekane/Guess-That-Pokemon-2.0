@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Guess that Pokémon</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="resource\image\Pokeball-PNG-Images.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 id="mainTitle">Guess that Pokémon</h1>
+    <div id="GenSelection">
+      <button id="Gen1" class="Gen" data-min="1" data-max="151">Gen 1</button>
+      <button id="Gen2" class="Gen" data-min="152" data-max="251">Gen 2</button>
+      <button id="Gen3" class="Gen" data-min="252" data-max="386">Gen 3</button>
+      <button id="Gen4" class="Gen" data-min="387" data-max="493">Gen 4</button>
+      <button id="Gen5" class="Gen" data-min="494" data-max="649">Gen 5</button>
+      <button id="Gen6" class="Gen" data-min="650" data-max="721">Gen 6</button>
+      <button id="Gen7" class="Gen" data-min="722" data-max="809">Gen 7</button>
+      <button id="Gen8" class="Gen" data-min="810" data-max="905">Gen 8</button>
+      <button id="Gen9" class="Gen" data-min="906" data-max="1025">
+        Gen 9
+      </button>
+      <p id="ChangesStatement" style="display: none">
+        Changes will be in affect in next round!
+      </p>
+    </div>
+    <div id="pokedex">
+      <div id="topDesign">
+        <div id="blueCircle">
+          <span id="scoreDisplay" style="display: block">0</span>
+        </div>
+        <img
+          src="resource/image/Pokeball-PNG-Images.png"
+          id="pokeball"
+          alt="pokeball"
+        />
+        <img src="resource/image/line.png" id="line" />
+      </div>
+      <div id="display">
+        <div>
+          <span id="lives"></span>
+          <img src="resource/image/alive.png" id="heart" alt="health Status" />
+        </div>
+        <img id="pokemonImage" src="" style="filter: brightness(0%)" />
+      </div>
+      <div id="command-center">
+        <div id="displayBar">
+          <p id="resultMessage" style="display: block"></p>
+        </div>
+        <button id="dontKnow" onclick="dontKnow()">Dont Know!</button>
+        <input
+          type="text"
+          id="pokemonInput"
+          placeholder="Guesss"
+          autofocus
+          autocomplete="off"
+        />
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
